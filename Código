@@ -1,0 +1,33 @@
+package ejer.pkg18.act2;
+import java.util.Scanner;
+public class Ejer18Act2 {
+    public static void main(String[] args) {
+        double horas_trabajadas, valor_hora, retencion, salario_bruto, salario_neto;
+        String nombre, cod_emple;
+        Scanner teclado = new Scanner(System.in);
+        
+        System.out.println("Codigo de empleado:");
+        cod_emple = teclado.nextLine();
+        
+        System.out.println("Nombre: ");
+        nombre = teclado.nextLine();
+        
+        System.out.println("Horas trabajadas: ");
+        horas_trabajadas = teclado.nextDouble();
+        
+        System.out.println("Valor de Horas:");
+        valor_hora = teclado.nextDouble();
+        
+        System.out.println("Retencion en la fuente::");
+        retencion = teclado.nextDouble();        
+        
+        salario_bruto = horas_trabajadas * valor_hora;
+        salario_neto = salario_bruto - (salario_bruto*(retencion/100));
+        
+        System.out.println("El codigo de empleado es " + cod_emple);
+        System.out.println("El nombre es " + nombre);
+        System.out.println("El salario bruto es " + salario_bruto);
+        System.out.println("El salario neto es " + salario_neto);
+    }
+    
+}
